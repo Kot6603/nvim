@@ -6,7 +6,6 @@ return {
 	{ "mbbill/undotree" }, -- undo tree
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{ "simrat39/symbols-outline.nvim" },
-	{ "ThePrimeagen/harpoon", branch = "harpoon2" },
 }
 
 --[[
