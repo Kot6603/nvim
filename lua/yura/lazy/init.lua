@@ -7,13 +7,6 @@ return {
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{ "simrat39/symbols-outline.nvim" },
 	{ "ThePrimeagen/harpoon", branch = "harpoon2" },
-	-- navigation
-	{
-		"kyazdani42/nvim-tree.lua",
-		version = "*",
-		lazy = false,
-		dependencies = { { "nvim-tree/nvim-web-devicons" } },
-	},
 }
 
 --[[
