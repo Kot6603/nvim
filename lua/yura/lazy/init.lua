@@ -44,7 +44,6 @@ return {
 	{ "lewis6991/gitsigns.nvim" },
 
 	-- nice to have
-	{ "numToStr/Comment.nvim" },
 	{ "windwp/nvim-autopairs" },
 	{ "windwp/nvim-ts-autotag" },
 	{ "nvim-treesitter/nvim-treesitter-context" },
