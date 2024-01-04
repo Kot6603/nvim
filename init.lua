@@ -1,8 +1,10 @@
 vim.g.mapleader = " "
 
-require("yura.lazy")
-require("yura.core.options")
-require("yura.core.keymaps")
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("yura")
+
 require("yura.plugins.comment")
 require("yura.plugins.nvim-tree")
 require("yura.plugins.lualine")
