@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 
 require("yura")
-require("yura.colorscheme")
 require("yura.keymaps")
 require("yura.options")
 require("yura.plugins.nvim-tree")
