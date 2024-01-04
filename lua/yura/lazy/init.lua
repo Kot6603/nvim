@@ -4,7 +4,6 @@ return {
 	{ "szw/vim-maximizer" },
 	{ "tpope/vim-surround" },
 	{ "mbbill/undotree" }, -- undo tree
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{ "simrat39/symbols-outline.nvim" },
 }
 
@@ -46,7 +45,6 @@ return {
 	-- nice to have
 	{ "windwp/nvim-autopairs" },
 	{ "windwp/nvim-ts-autotag" },
-	{ "nvim-treesitter/nvim-treesitter-context" },
 	{ "ThePrimeagen/refactoring.nvim" },
 
 	-- { "vim-scripts/ReplaceWithRegister" },
