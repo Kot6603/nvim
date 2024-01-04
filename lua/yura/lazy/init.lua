@@ -5,6 +5,7 @@ return {
 	{ "tpope/vim-surround" },
 	{ "mbbill/undotree" }, -- undo tree
 	{ "simrat39/symbols-outline.nvim" },
+	{ "windwp/nvim-ts-autotag" },
 }
 
 --[[
@@ -38,15 +39,9 @@ return {
 		},
 	},
 
-	-- git
 	{ "kdheepak/lazygit.nvim" },
 
-	-- nice to have
-	{ "windwp/nvim-autopairs" },
-	{ "windwp/nvim-ts-autotag" },
-
 	-- { "vim-scripts/ReplaceWithRegister" },
-
 })
 
 -- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
