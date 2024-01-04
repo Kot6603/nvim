@@ -47,7 +47,6 @@ return {
 		},
 	},
 
-
 	-- git
 	{ "kdheepak/lazygit.nvim" },
 	{ "lewis6991/gitsigns.nvim" },
@@ -59,10 +58,7 @@ return {
 	{ "nvim-treesitter/nvim-treesitter-context" },
 	{ "ThePrimeagen/refactoring.nvim" },
 
-	-- what i had before
-
 	-- { "vim-scripts/ReplaceWithRegister" },
-	{ "nvim-lualine/lualine.nvim" }, -- status line
 
 })
 
