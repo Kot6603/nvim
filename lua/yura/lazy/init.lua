@@ -40,12 +40,10 @@ return {
 
 	-- git
 	{ "kdheepak/lazygit.nvim" },
-	{ "lewis6991/gitsigns.nvim" },
 
 	-- nice to have
 	{ "windwp/nvim-autopairs" },
 	{ "windwp/nvim-ts-autotag" },
-	{ "ThePrimeagen/refactoring.nvim" },
 
 	-- { "vim-scripts/ReplaceWithRegister" },
 
