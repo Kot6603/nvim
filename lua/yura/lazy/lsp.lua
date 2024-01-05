@@ -121,6 +121,17 @@ return {
           { name = 'buffer' },
         })
       })
+      vim.diagnostic.config({
+        update_in_insert = true,
+        float = {
+          focusable = false,
+          style = "minimal",
+          border = "rounded",
+          source = "always",
+          header = "",
+          prefix = "",
+        }
+      })
 
       -- -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
       -- cmp.setup.cmdline({ '/', '?' }, {
