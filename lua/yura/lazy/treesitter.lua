@@ -32,6 +32,8 @@ return {
           "vim",
           "dockerfile",
           "gitignore",
+          "cpp",
+          "c",
         },
         -- auto install above language parsers
         auto_install = true,
