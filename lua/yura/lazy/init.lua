@@ -11,15 +11,11 @@ return {
 --[[
 	-- lsp
 	{
-		"VonHeikemen/lsp-zero.nvim",
 		branch = "v3.x",
 		dependencies = {
 			-- LSP support
 			{ "jay-babu/mason-nvim-dap.nvim" },
-
-
 			-- Snippets
-			{ "L3MON4D3/LuaSnip", version = "2.*" },
 			{ "honza/vim-snippets" },
 			{ "rafamadriz/friendly-snippets" },
 		},
