@@ -13,6 +13,7 @@ return {
 			"hrsh7th/cmp-nvim-lua",
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
+			"windwp/nvim-autopairs",
 		},
 		config = function()
 			local mason = require("mason")
@@ -129,7 +130,7 @@ return {
 					["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
 					["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 					["<C-e>"] = cmp.mapping.abort(),
-					["<C-y>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
 				-- sources for autocompletion
 				sources = cmp.config.sources({
@@ -182,6 +183,9 @@ return {
 				local hl = "DiagnosticSign" .. type
 				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 			end
+
+			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 		end,
 	},
 }

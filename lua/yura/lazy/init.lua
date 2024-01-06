@@ -8,13 +8,11 @@ return {
 	{ "windwp/nvim-ts-autotag" },
 }
 
-			-- LSP support
+-- LSP support
 -- 			{ "jay-babu/mason-nvim-dap.nvim" },
 -- 			{ "honza/vim-snippets" },
 -- 			{ "rafamadriz/friendly-snippets" },
---
 -- 	{ "kdheepak/lazygit.nvim" },
---
 -- 	-- { "vim-scripts/ReplaceWithRegister" },
 --
 -- -- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
