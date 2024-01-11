@@ -40,7 +40,7 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 -- plugin keymaps --
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- maximise split window or restore back
+keymap.set("n", "<leader>wm", ":MaximizerToggle<CR>") -- maximise split window or restore back
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR> <Cmd>only<CR>") -- toggles file explorer
@@ -52,6 +52,8 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- lists commits and checkout with enter
+keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- checkout branch
 
 -- undotree
 keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
