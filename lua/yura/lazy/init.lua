@@ -6,6 +6,8 @@ return {
 	{ "mbbill/undotree" }, -- undo tree
 	{ "simrat39/symbols-outline.nvim" },
 	{ "windwp/nvim-ts-autotag" },
+	{ "theprimeagen/vim-be-good" },
+	{ "github/copilot.vim" },
 }
 
 -- LSP support
