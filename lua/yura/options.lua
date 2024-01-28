@@ -1,6 +1,6 @@
 local opt = vim.opt -- for conciseness
 
--- opt.guicursor = "" - removes the straight cursor
+opt.guicursor = "n-v-c-sm:block"
 
 -- line numbers
 opt.relativenumber = true
@@ -41,10 +41,10 @@ opt.splitbelow = true
 
 -- extra
 opt.scrolloff = 8
-opt.colorcolumn = "50"
+opt.colorcolumn = "80"
 
 -- after getting undotree plugin
--- opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
--- opt.undofile = true
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
 
 opt.iskeyword:append("-")

@@ -1,6 +1,13 @@
 return {
 	{
 		"neovim/nvim-lspconfig",
+    opts = {
+      setup = {
+        clangd = function(_, opts)
+          opts.capabilities.offsetEncoding = { "utf-16" }
+        end,
+      }
+    },
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -128,9 +135,9 @@ return {
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-p>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 					["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
-					["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+					["<C-space>"] = cmp.mapping.complete(), -- show completion suggestions
 					["<C-e>"] = cmp.mapping.abort(),
-					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+					["<C-y>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
 				-- sources for autocompletion
 				sources = cmp.config.sources({

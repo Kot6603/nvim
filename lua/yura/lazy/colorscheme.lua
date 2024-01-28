@@ -2,9 +2,13 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
+		lazy = false,
+		priority = 1000,
 		config = function()
 			require("rose-pine").setup({
-				disable_background = true,
+				styles = {
+					transparency = true,
+				},
 			})
 			local color = "rose-pine-moon"
 			vim.cmd.colorscheme(color)
@@ -14,8 +18,26 @@ return {
 	},
 	-- tokyo night
 	-- {
-	--   "folke/tokyonight.nvim",
-	--   lazy = true,
-	--   opts = { style = "moon" },
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	config = function()
+	-- 		require("tokyonight").setup({
+	-- 			transparent = true,
+	-- 		})
+	-- 		vim.cmd.colorscheme("tokyonight")
+	-- 	end,
+	-- },
+	-- catppuccin
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("catppuccin").setup({
+	-- 			transparent_background = true,
+	-- 		})
+	-- 		local color = "catppuccin-macchiato"
+	-- 		vim.cmd.colorscheme(color)
+	-- 	end,
 	-- },
 }
