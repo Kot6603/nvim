@@ -38,6 +38,7 @@ return {
 					"emmet_ls",
 					"pyright",
 					"clangd",
+					"pylsp",
 				},
 				-- auto-install configured servers (with lspconfig)
 				automatic_installation = true, -- not the same as ensure_installed
@@ -77,6 +78,22 @@ return {
 								"scss",
 								"less",
 								"svelte",
+							},
+						})
+					end,
+					["pylsp"] = function()
+						-- configure pylsp language server
+						lspconfig["pslsp"].setup({
+							capabilities = capabilities,
+							settings = {
+								pylsp = {
+									plugins = {
+										pycodestyle = {
+											ignore = { "E501" },
+											maxLineLength = 80,
+										},
+									},
+								},
 							},
 						})
 					end,
