@@ -51,7 +51,7 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "<leader>wm", ":MaximizerToggle<CR>") -- maximise split window or restore back
 
 -- nvim-tree
--- keymap.set("n", "<leader>e", ":NvimTreeToggle<CR> <cmd>only<CR>") -- toggles file explorer
+-- keymap.set("n", "<leader>e", ":NvimTreeToggle<CR> <cmd>only<CR>") -- toggles file explorer keymap.set("n", "<leader>e", ":Ex<CR>") -- toggles file explorer
 keymap.set("n", "<leader>e", ":Ex<CR>") -- toggles file explorer
 
 -- telescope
@@ -63,6 +63,13 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- lists commits and checkout with enter
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- checkout branch
+
+-- obsidian
+keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>") -- open obsidian
+keymap.set("n", "<leader>ol", "<cmd>ObsidianLink<cr>") -- open link in obsidian
+keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "Create New Note" }) -- create new note in obsidian
+keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>", { desc = "Search Obsidian" }) -- Search obsidian
+keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<cr>", { desc = "Obsidian Quick Switch" })
 
 -- undotree
 keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")

@@ -1,13 +1,13 @@
 return {
 	{
 		"neovim/nvim-lspconfig",
-    opts = {
-      setup = {
-        clangd = function(_, opts)
-          opts.capabilities.offsetEncoding = { "utf-16" }
-        end,
-      }
-    },
+		opts = {
+			setup = {
+				clangd = function(_, opts)
+					opts.capabilities.offsetEncoding = { "utf-16" }
+				end,
+			},
+		},
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -106,7 +106,7 @@ return {
 					vim.keymap.set({ "n", "v" }, "<leader>vca", vim.lsp.buf.code_action, opts) -- selects an available code action
 					vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts) -- lists all the references to current symbol
 					vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts) -- renames all references to the symbol under the cursor
-					vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help, opts) -- shows the signature
+					-- vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help, opts) -- shows the signature
 					vim.keymap.set("n", "<leader>vtd", vim.lsp.buf.type_definition, opts) -- shows type definition
 
 					-- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
