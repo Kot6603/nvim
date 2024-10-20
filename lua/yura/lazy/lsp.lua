@@ -30,7 +30,6 @@ return {
 			mason.setup()
 			mason_lspconfig.setup({
 				ensure_installed = {
-					"tsserver",
 					"html",
 					"cssls",
 					"tailwindcss",
@@ -39,6 +38,7 @@ return {
 					"pyright",
 					"clangd",
 					"pylsp",
+					"ts_ls",
 				},
 				-- auto-install configured servers (with lspconfig)
 				automatic_installation = true, -- not the same as ensure_installed
@@ -83,15 +83,22 @@ return {
 					end,
 					["pylsp"] = function()
 						-- configure pylsp language server
-						lspconfig["pslsp"].setup({
+						lspconfig["pylsp"].setup({
 							capabilities = capabilities,
 							settings = {
 								pylsp = {
 									plugins = {
 										pycodestyle = {
-											ignore = { "E501" },
-											maxLineLength = 80,
+											ignore = { "E501", "W503" },
+											maxLineLength = 120,
 										},
+										-- pydocstyle = {
+										-- 	enabled = true,
+										-- 	convention = "numpy",
+										-- },
+										-- pylint = {
+										-- 	enabled = true,
+										-- },
 									},
 								},
 							},
@@ -121,7 +128,7 @@ return {
 					vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts) -- list all symbols in quickfix
 					vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts) -- diagnose that shi
 					vim.keymap.set({ "n", "v" }, "<leader>vca", vim.lsp.buf.code_action, opts) -- selects an available code action
-					vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts) -- lists all the references to current symbol
+					vim.keymap.set("n", "gr", vim.lsp.buf.references, opts) -- lists all the references to current symbol
 					vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts) -- renames all references to the symbol under the cursor
 					-- vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help, opts) -- shows the signature
 					vim.keymap.set("n", "<leader>vtd", vim.lsp.buf.type_definition, opts) -- shows type definition
