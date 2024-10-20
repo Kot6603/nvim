@@ -60,6 +60,7 @@ keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>") -- find files in g
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references<cr>") -- list references
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- lists commits and checkout with enter
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- checkout branch
@@ -76,3 +77,7 @@ keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
 
 -- lazygit
 keymap.set("n", "<leader>gg", "<Cmd>LazyGit<CR>")
+
+-- fugitive
+keymap.set("n", "gh", ":diffget //2<CR>") -- get changes from left
+keymap.set("n", "gl", ":diffget //3<CR>") -- get changes from right
