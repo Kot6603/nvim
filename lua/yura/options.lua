@@ -1,6 +1,7 @@
 local opt = vim.opt -- for conciseness
 
 opt.guicursor = "n-v-c-sm:block"
+opt.conceallevel = 1 -- for obsidian nice rendering
 
 -- line numbers
 opt.relativenumber = true
