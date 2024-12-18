@@ -25,7 +25,7 @@ return {
 			-- 	-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
 			-- 	template = nil,
 			-- },
-			-- ui = { enable = false },
+			ui = { enable = false },
 			-- Optional, boolean or a function that takes a filename and returns a boolean.
 			-- `true` indicates that you don't want obsidian.nvim to manage frontmatter.
 			disable_frontmatter = true,
@@ -51,12 +51,17 @@ return {
 	},
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-		enabled = false,
+		enabled = true,
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
 		opts = {},
 	},
-	-- {
-	-- "iamcco/markdown-preview.nvim",
-	-- 	cmd = "MarkdownPreviewToggle",
-	-- },
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && yarn install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
 }
