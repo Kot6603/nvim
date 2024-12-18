@@ -39,6 +39,7 @@ return {
 					"clangd",
 					"pylsp",
 					"ts_ls",
+					"jdtls",
 				},
 				-- auto-install configured servers (with lspconfig)
 				automatic_installation = true, -- not the same as ensure_installed
@@ -94,7 +95,7 @@ return {
 										},
 										-- pydocstyle = {
 										-- 	enabled = true,
-										-- 	convention = "numpy",
+										-- 	convention = "pep257",
 										-- },
 										-- pylint = {
 										-- 	enabled = true,
@@ -103,6 +104,10 @@ return {
 								},
 							},
 						})
+					end,
+					["jdtls"] = function()
+						-- configure emmet language server
+						lspconfig["jdtls"].setup({})
 					end,
 				},
 			})
