@@ -42,7 +42,7 @@ opt.splitbelow = true
 
 -- extra
 opt.scrolloff = 8
-opt.colorcolumn = "80"
+opt.colorcolumn = "120"
 
 -- after getting undotree plugin
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
