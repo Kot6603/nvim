@@ -10,6 +10,7 @@ return {
 				python = { "isort", "black" },
 				-- use a sublist to run only the first available formatter
 				javascript = { { "prettierd", "prettier" } },
+				java = { "google-java-format" },
 			},
 			format_on_save = function(bufnr)
 				-- Disable with a global or buffer-local variable
