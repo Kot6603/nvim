@@ -21,6 +21,18 @@ return {
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
 			"windwp/nvim-autopairs",
+			-- folke goated
+			{
+				"folke/lazydev.nvim",
+				ft = "lua", -- only load on lua files
+				opts = {
+					library = {
+						-- See the configuration section for more details
+						-- Load luvit types when the `vim.uv` word is found
+						{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+					},
+				},
+			},
 		},
 		config = function()
 			local mason = require("mason")
@@ -120,12 +132,12 @@ return {
 			-- after the language server attaches to the current buffer
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-				callback = function(ev)
+				callback = function(args)
 					-- Enable completetion triggered by <c-x><c-o>
-					vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+					vim.bo[args.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 					-- Buffer local mappings
 					-- See `:help vim.lsp.*` for documentation on any of the below functions
-					local opts = { buffer = ev.buf }
+					local opts = { buffer = args.buf }
 					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- go to definition
 					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts) -- go to implementation
