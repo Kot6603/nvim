@@ -1,18 +1,16 @@
-## My Configuration for Neovim
----
+# My Configuration for Neovim
 
 Plugin Manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
 
-### Installation
----
+## Installation
 Run the following command in the `~/.config` directory:
 ```bash
 git clone git@github.com:Kot6603/nvim.git
 ```
-- [ ] More information to be added
 
-### Plugins
----
+More information to be added
+
+## Plugins
 Plugins are managed using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 Following plugins are installed:
@@ -55,13 +53,12 @@ Within `init.lua` - general plugins without config
 { "github/copilot.vim" },
 ```
 
-#### Plugins to Add:
+### Plugins to Add:
 - [ ] Add trouble integration
 
-### Other Notes
+## Other Notes
 - general keymaps are in `keymaps.lua`
 
-### External Dependencies
----
+## External Dependencies
 - [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fzf](https://github.com/junegunn/fzf)
