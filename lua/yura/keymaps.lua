@@ -39,8 +39,27 @@ keymap.set("n", "<leader>Y", '"+Y')
 keymap.set("n", "<leader>d", '"_d')
 keymap.set("v", "<leader>d", '"_d')
 
--- opening up terminal
-keymap.set("n", "<leader>te", "<Cmd>sp<CR> <Cmd>term<CR> i")
+-- terminal configs
+local term_job_id = 0
+keymap.set("n", "<leader>st", function()
+	vim.cmd.vnew()
+	vim.cmd.term()
+	vim.cmd.wincmd("J")
+	vim.api.nvim_win_set_height(0, 10)
+	vim.api.nvim_feedkeys("i", "n", true)
+	term_job_id = vim.bo.channel
+end)
+
+keymap.set("n", "<leader>example", function()
+	vim.fn.chansend(term_job_id, { "ls -al\r\n" })
+end)
+
+keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
+keymap.set("n", "<leader>th", "<C-w>v <C-w>h <cmd>term<CR> i")
+keymap.set("n", "<leader>tj", "<C-w>s <cmd>term<CR> i")
+keymap.set("n", "<leader>tk", "<C-w>s <C-w>k <cmd>term<CR> i")
+keymap.set("n", "<leader>tl", "<C-w>v <cmd>term<CR> i")
 
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
@@ -53,17 +72,6 @@ keymap.set("n", "<leader>wm", ":MaximizerToggle<CR>") -- maximise split window o
 -- nvim-tree
 -- keymap.set("n", "<leader>e", ":NvimTreeToggle<CR> <cmd>only<CR>") -- toggles file explorer keymap.set("n", "<leader>e", ":Ex<CR>") -- toggles file explorer
 keymap.set("n", "<leader>e", ":Ex<CR>") -- toggles file explorer
-
--- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>") -- find files in git
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
-keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references<cr>") -- list references
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
-keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- lists commits and checkout with enter
-keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- checkout branch
 
 -- obsidian
 keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>") -- open obsidian
