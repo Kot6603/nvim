@@ -2,14 +2,15 @@ local opt = vim.opt -- for conciseness
 
 opt.guicursor = "n-v-c-sm:block"
 opt.conceallevel = 1 -- for obsidian nice rendering
+vim.g.netrw_banner = 0 -- clears netrw header
 
 -- line numbers
 opt.relativenumber = true
 opt.number = true
 
 -- tabs and indentation
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
